@@ -45,8 +45,10 @@ for (let content of booksObj){
 
   if(content.read == "false"){
     isRead = "Not yet read"
+    btnColor = "btn-secondary"
   } else {
     isRead = "Already read"
+    btnColor = "btn-success"
   }
 
    document.getElementById("content").innerHTML +=
@@ -61,7 +63,7 @@ for (let content of booksObj){
              <p class="card-text">${content.author}</p>
              <p class="card-text mt-4">${content.description}</p>
            </div>
-           <button class="btn btn-secondary mb-3 mt-3">${isRead}</button>
+           <button class="btn ${btnColor} mb-3 mt-3">${isRead}</button>
          </div>
        </div>
     </div>`
