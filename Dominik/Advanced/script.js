@@ -19,7 +19,7 @@ let books =
       "title": "The easy guide to tax fraud",
       "author": "Mr. Buisiness",
       "description": "Are you sick of working half the year for the tax office? This book provides you with the best tax evasion tactics. Please dont tell the IRS about this book.",
-      "read": "false"
+      "read": "true"
     },
     {
       "img": "/Dominik/Advanced/pics/academic.jpeg",
@@ -33,7 +33,7 @@ let books =
       "title": "The life of a Janitor",
       "author": "Crazy Dave",
       "description": "Written by the infamous Crazy Dave, this book can be considered as the manifesto of clean floors. It is often regarded as one of the most important literary works of the 21st century.",
-      "read": "false"
+      "read": "true"
     }
   ]`
 
@@ -41,20 +41,16 @@ let booksObj = JSON.parse(books);
 
 //console.table(booksObj);
 
-
 for (let content of booksObj){
 
-  let isRead = "";
-
   if(content.read == "false"){
-    let = isRead = "Not yet read"
+    isRead = "Not yet read"
   } else {
-    let = isread = "Already read"
+    isRead = "Already read"
   }
 
    document.getElementById("content").innerHTML +=
-   `<div class="col">
-     <div class="card mb-3"">
+   `<div class="card mb-3"">
        <div class="row g-0">
          <div class="col-md-4">
            <img src="${content.img}" class="img-fluid rounded-start">
@@ -68,6 +64,5 @@ for (let content of booksObj){
            <button class="btn btn-secondary mb-3 mt-3">${isRead}</button>
          </div>
        </div>
-      </div>
-   </div>`
+    </div>`
 }
