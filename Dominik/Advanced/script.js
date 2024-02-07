@@ -51,6 +51,19 @@ for (let content of booksObj){
     btnColor = "btn-success"
   }
 
+  // function changeBtn(){
+  //   if(content.read == "false"){
+  //     btnColor = "btn-success";
+  //     isRead = "Already read"
+  //   } else if(content.read == "true"){
+  //     btnColor = "btn-secondary";
+  //     isRead = "Not yet read"
+  //   }
+  // }
+
+  // var myBtn = document.getElementById("myBtn");
+  // myBtn.addEventListener("click", changeBtn);
+
    document.getElementById("content").innerHTML +=
    `<div class="card mb-3"">
        <div class="row g-0">
@@ -63,7 +76,7 @@ for (let content of booksObj){
              <p class="card-text">${content.author}</p>
              <p class="card-text mt-4">${content.description}</p>
            </div>
-           <button class="btn ${btnColor} mb-3 mt-3">${isRead}</button>
+           <button id="myBtn" class="btn ${btnColor} mb-3 mt-3">${isRead}</button>
          </div>
        </div>
     </div>`
